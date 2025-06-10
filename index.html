@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loading your pricing...</title>
     <style>
-        /* ALL THE CSS YOU PROVIDED GOES HERE */
-        body { 
+        /* Basic styling for the loading page */
+        body {
+            font-family: sans-serif;
             display: flex;
             flex-direction: column; /* Stack elements vertically */
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height: 100vh; /* Make it take full screen height */
             margin: 0;
             background-color: #f4f4f4;
             color: #555;
@@ -36,48 +37,32 @@
     </style>
 </head>
 <body>
-    </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    </head>
-<body>
     <div class="loader"></div>
     <p>Loading the correct pricing for your region...</p>
 
     <script>
-        // ... (your JavaScript code for fetching location and redirecting) ...
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    </head>
-<body>
-    <div class="loader"></div>
-    <p>Loading the correct pricing for your region...</p>
-
-    <script>
-        // IMPORTANT: Replace 'YOUR_API_KEY' if you switch APIs that require it.
-        // For simple, small-scale use, ipapi.co is often sufficient for IP lookup.
-        fetch('https://ipapi.co/json/') 
+        // This uses ipapi.co for IP geolocation. It's generally free for basic use.
+        // It helps determine the user's country based on their internet connection.
+        fetch('https://ipapi.co/json/')
             .then(response => response.json())
             .then(data => {
-                const countryCode = data.country_code; // e.g., "MY", "SG", "US"
+                const countryCode = data.country_code; // This will be like "MY" or "SG"
 
                 if (countryCode === 'MY') {
-                    window.location.href = 'prices-myr.html'; // Redirect to Malaysian price list
+                    // If the user is in Malaysia, go to the MYR price page
+                    window.location.href = 'prices-myr.html';
                 } else if (countryCode === 'SG') {
-                    window.location.href = 'prices-sgd.html'; // Redirect to Singaporean price list
+                    // If the user is in Singapore, go to the SGD price page
+                    window.location.href = 'prices-sgd.html';
                 } else {
-                    window.location.href = 'contact-us.html'; // Fallback
+                    // If user is from another country, or detection fails, go to a contact page
+                    window.location.href = 'contact-us.html';
                 }
             })
             .catch(error => {
                 console.error('Error fetching geolocation:', error);
-                window.location.href = 'contact-us.html'; // Fallback
+                // If there's any error with the detection, go to the contact page as a fallback
+                window.location.href = 'contact-us.html';
             });
     </script>
 </body>
