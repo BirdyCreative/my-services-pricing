@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h1, h2 {
+    color: #0056b3; /* A nice blue */
+}
+.service-category, .add-ons { /* These styles apply to both main service sections and the add-ons section */
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.package h3 { /* For individual packages if you use them outside tables */
+    color: #333;
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #28a745; /* Green for price */
+    margin-bottom: 15px;
+}
+ul { /* For any lists you might still have */
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+ul li::before {
+    content: '✔️'; /* Checkmark icon */
+    position: absolute;
+    left: 0;
+    color: #28a745;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* --- Styles for Comparison Tables (applies to all tables within .package-table-container) --- */
+.package-table-container {
+    overflow-x: auto; /* Enables horizontal scrolling on small screens if table is too wide */
+    margin-top: 20px; /* Space above table */
+    padding: 0;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes spacing between table cells */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+th, td {
+    padding: 12px 15px; /* Padding inside cells */
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for headers */
+    color: #333;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents header text from wrapping too much */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for readability */
+}
+
+tbody tr:hover {
+    background-color: #e6f7ff; /* Highlight row on hover */
+}
+
+/* Style for inquiry buttons in the table */
+.button {
+    display: inline-block;
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Space above button */
+    white-space: nowrap; /* Keep button text on one line */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Basic responsiveness for smaller screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .service-category, .add-ons {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+
+    /* Responsive adjustments for tables */
+    table, thead, tbody, th, td, tr {
+        display: block; /* Makes table cells stack vertically on small screens */
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px; /* Hides table headers visually, but keeps them for screen readers */
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        background-color: #fff; /* Ensure rows have background */
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%; /* Space for the "feature" label */
+        text-align: right;
+    }
+
+    td:before {
+        /* This content property uses the data-label attribute from your HTML <td> tags. */
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    /* Adjust button width for smaller screens */
+    .button {
+        width: calc(100% - 30px); /* Full width minus padding */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+}
