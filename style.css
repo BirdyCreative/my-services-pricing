@@ -1,174 +1,235 @@
+/* General Body and Container Styling */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
-    padding: 20px;
-    background-color: #f8f8f8;
-    color: #333;
-}
-header {
-    text-align: center;
-    margin-bottom: 40px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-h1, h2 {
-    color: #0056b3; /* A nice blue */
-}
-.service-category, .add-ons { /* These styles apply to both main service sections and the add-ons section */
-    background-color: #fff;
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.package h3 { /* For individual packages if you use them outside tables */
-    color: #333;
-    margin-top: 0;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
-.price {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #28a745; /* Green for price */
-    margin-bottom: 15px;
-}
-ul { /* For any lists you might still have */
-    list-style: none;
     padding: 0;
-}
-ul li {
-    margin-bottom: 8px;
-    padding-left: 25px;
-    position: relative;
-}
-ul li::before {
-    content: '✔️'; /* Checkmark icon */
-    position: absolute;
-    left: 0;
-    color: #28a745;
-}
-footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #777;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* --- Styles for Comparison Tables (applies to all tables within .package-table-container) --- */
-.package-table-container {
-    overflow-x: auto; /* Enables horizontal scrolling on small screens if table is too wide */
-    margin-top: 20px; /* Space above table */
-    padding: 0;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* Section Headings */
+.service-category h2,
+.add-ons h2,
+h3 {
+    color: #0056b3;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+h3 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+.package-table-container {
+    overflow-x: auto; /* Allows horizontal scrolling for wide tables on small screens */
+    margin-bottom: 30px;
 }
 
 table {
     width: 100%;
-    border-collapse: collapse; /* Removes spacing between table cells */
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures border-radius applies to table */
 }
 
-table, th, td {
-    border: 1px solid #ddd; /* Light gray border */
+thead {
+    background-color: #007bff;
+    color: #fff;
 }
 
 th, td {
-    padding: 12px 15px; /* Padding inside cells */
+    padding: 15px;
     text-align: left;
-    vertical-align: top;
+    border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #f2f2f2; /* Light gray background for headers */
-    color: #333;
     font-weight: bold;
-    white-space: nowrap; /* Prevents header text from wrapping too much */
+    text-transform: uppercase;
+    font-size: 0.9em;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Zebra striping for readability */
+    background-color: #f9f9f9;
 }
 
 tbody tr:hover {
-    background-color: #e6f7ff; /* Highlight row on hover */
+    background-color: #f1f1f1;
 }
 
-/* Style for inquiry buttons in the table */
+.price {
+    font-weight: bold;
+    color: #28a745; /* Green for prices */
+}
+
+small {
+    font-size: 0.8em;
+    color: #666;
+}
+
+em {
+    font-style: italic;
+    color: #888;
+    font-size: 0.85em;
+}
+
+/* Buttons for Inquire */
 .button {
     display: inline-block;
-    background-color: #007bff; /* Blue button */
-    color: white;
-    padding: 10px 15px;
-    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    margin-top: 10px; /* Space above button */
-    white-space: nowrap; /* Keep button text on one line */
+    margin-top: 15px;
 }
 
 .button:hover {
     background-color: #0056b3;
 }
 
-/* Basic responsiveness for smaller screens */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-    .service-category, .add-ons {
+/* Specific styling for the contact-us.html info section */
+.info .button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    margin: 10px; /* Adjust margin for contact page buttons */
+}
+
+/* Responsive Design for Tables */
+@media screen and (max-width: 768px) {
+    main {
+        margin: 10px;
         padding: 15px;
     }
+
     h1 {
         font-size: 1.8em;
     }
-    h2 {
+
+    .service-category h2,
+    .add-ons h2,
+    h3 {
+        font-size: 1.5em;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    h3 {
         font-size: 1.3em;
     }
 
-    /* Responsive adjustments for tables */
     table, thead, tbody, th, td, tr {
-        display: block; /* Makes table cells stack vertically on small screens */
+        display: block;
     }
 
     thead tr {
         position: absolute;
-        top: -9999px; /* Hides table headers visually, but keeps them for screen readers */
+        top: -9999px;
         left: -9999px;
     }
 
     tr {
-        border: 1px solid #ddd;
-        margin-bottom: 10px;
-        background-color: #fff; /* Ensure rows have background */
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     td {
         border: none;
-        border-bottom: 1px solid #eee;
         position: relative;
-        padding-left: 50%; /* Space for the "feature" label */
+        padding-left: 50%;
         text-align: right;
+        border-bottom: 1px dashed #eee; /* Add dashed line for visual separation */
+        font-size: 0.9em;
+    }
+
+    td:last-child {
+        border-bottom: none;
     }
 
     td:before {
-        /* This content property uses the data-label attribute from your HTML <td> tags. */
         content: attr(data-label);
         position: absolute;
-        left: 6px;
+        left: 10px;
         width: 45%;
         padding-right: 10px;
         white-space: nowrap;
         text-align: left;
         font-weight: bold;
+        color: #0056b3;
     }
 
-    /* Adjust button width for smaller screens */
-    .button {
-        width: calc(100% - 30px); /* Full width minus padding */
-        box-sizing: border-box; /* Include padding in width calculation */
+    .info {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .info p {
+        font-size: 1em;
+    }
+
+    .info .button {
+        display: block; /* Make buttons stack on small screens */
+        width: calc(100% - 20px); /* Adjust width considering padding */
+        margin: 10px auto;
+        max-width: 300px;
+    }
+}
+
+/* Further adjustments for very small screens if needed */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .service-category h2,
+    .add-ons h2,
+    h3 {
+        font-size: 1.3em;
+    }
+    td {
+        padding-left: 40%; /* Adjust space for data-label on very small screens */
+    }
+    td:before {
+        width: 35%;
     }
 }
