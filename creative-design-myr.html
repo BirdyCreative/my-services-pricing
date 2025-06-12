@@ -6,26 +6,7 @@
     <title>Creative Design Services & Prices - Malaysia (MYR) | Birdy Creative Studio</title>
     <link rel="stylesheet" href="style.css">
     
-    <script>
-        fetch('https://ipapi.co/json/')
-            .then(response => response.json())
-            .then(data => {
-                const countryCode = data.country_code;
-                // If user is NOT in Malaysia, redirect them
-                if (countryCode !== 'MY') {
-                    if (countryCode === 'SG') {
-                        window.location.href = 'creative-design-sgd.html'; // Redirect SG users to SGD Creative Design page
-                    } else {
-                        window.location.href = 'contact-us.html'; // Redirect others to contact page
-                    }
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching geolocation:', error);
-                // Fallback if IP detection fails, redirect to contact page
-                window.location.href = 'contact-us.html';
-            });
-    </script>
+
     </head>
 <body>
     <header>
@@ -68,6 +49,7 @@
                                 - 1 free revision <br>
                                 - Delivery: PDF format <br>
                                 - Turnaround time: 1–7 days <br>
+                                <strong>* Design-only, no printing included.</strong><br>
                                 <strong>* Client provides logo, high-quality photo, and detailed info.</strong><br>
                                 <strong>* Light editing only, no complex retouching or product photography.</strong>
                             </td>
