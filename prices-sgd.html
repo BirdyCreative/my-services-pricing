@@ -5,7 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Services & Prices - Singapore (SGD) | Birdy Creative Studio</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <script>
+        fetch('https://ipapi.co/json/')
+            .then(response => response.json())
+            .then(data => {
+                const countryCode = data.country_code;
+                // If user is NOT in Singapore, redirect them
+                if (countryCode !== 'SG') {
+                    // You can choose to redirect to the MYR page or a general contact page
+                    if (countryCode === 'MY') {
+                        window.location.href = 'prices-myr.html'; // Redirect MY users to MYR page
+                    } else {
+                        window.location.href = 'contact-us.html'; // Redirect others to contact page
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching geolocation:', error);
+                // Fallback if IP detection fails, redirect to contact page
+                window.location.href = 'contact-us.html';
+            });
+    </script>
+    </head>
 <body>
     <header>
         <h1>Our Photography Services - Prices in Singapore Dollars (SGD)</h1>
