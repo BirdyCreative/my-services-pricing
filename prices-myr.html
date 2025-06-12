@@ -5,7 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Services & Prices - Malaysia (MYR) | Birdy Creative Studio</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <script>
+        fetch('https://ipapi.co/json/')
+            .then(response => response.json())
+            .then(data => {
+                const countryCode = data.country_code;
+                // If user is NOT in Malaysia, redirect them
+                if (countryCode !== 'MY') {
+                    // You can choose to redirect to the SGD page or a general contact page
+                    if (countryCode === 'SG') {
+                        window.location.href = 'prices-sgd.html'; // Redirect SG users to SGD page
+                    } else {
+                        window.location.href = 'contact-us.html'; // Redirect others to contact page
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching geolocation:', error);
+                // Fallback if IP detection fails, redirect to contact page
+                window.location.href = 'contact-us.html';
+            });
+    </script>
+    </head>
 <body>
     <header>
         <h1>Our Photography Services - Prices in Malaysian Ringgit (MYR)</h1>
