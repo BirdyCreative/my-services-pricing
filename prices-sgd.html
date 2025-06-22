@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Services & Prices - Singapore (SGD) | Birdy Creative Studio</title>
+    <title>Product Photography & Retouching Prices - SGD | Birdy Creative Studio</title>
     <link rel="stylesheet" href="style.css">
+
     <script>
         fetch('https://ipapi.co/json/')
             .then(response => response.json())
             .then(data => {
                 const countryCode = data.country_code;
-                // If user is NOT in Singapore, redirect them
-                if (countryCode !== 'SG') {
-                    // You can choose to redirect to the MYR page or a general contact page
+                if (countryCode !== 'SG') { // If the user is NOT in Singapore
                     if (countryCode === 'MY') {
                         window.location.href = 'prices-myr.html'; // Redirect MY users to MYR page
                     } else {
@@ -22,253 +21,147 @@
             })
             .catch(error => {
                 console.error('Error fetching geolocation:', error);
-                // Fallback if IP detection fails, redirect to contact page
+                // Fallback if IP detection fails
                 window.location.href = 'contact-us.html';
             });
     </script>
     </head>
 <body>
+    <noscript>
+        <div style="text-align: center; padding: 20px; border: 1px solid #ddd; background-color: #fff; margin: 20px auto; max-width: 600px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px;">
+            <h2>Please Enable JavaScript</h2>
+            <p>Our website uses JavaScript to show you the correct pricing based on your location. Please enable JavaScript in your browser settings to view our prices automatically.</p>
+            <p>Alternatively, you can manually select your preferred pricing here:</p>
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <li><a href="prices-myr.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Malaysia (MYR) - Product Photography & Retouching</a></li>
+                <li><a href="prices-sgd.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Singapore (SGD) - Product Photography & Retouching</a></li>
+                <li><a href="prices-usd-worldwide.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Worldwide (USD) - Photo Retouching & E-commerce Listing</a></li>
+                <li><a href="creative-design-myr.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Malaysia (MYR) - Creative Design</a></li>
+                <li><a href="creative-design-sgd.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Singapore (SGD) - Creative Design</a></li>
+                <li><a href="contact-us.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Contact Us</a></li>
+            </ul>
+            <p style="margin-top: 20px;">If you need assistance, please email us at <a href="mailto:birdycreative@outlook.com" style="color: #007bff; text-decoration: underline;">birdycreative@outlook.com</a></p>
+        </div>
+    </noscript>
     <header>
-        <h1>Our Photography Services - Prices in Singapore Dollars (SGD)</h1>
+        <h1>Product Photography & Retouching Prices (SGD)</h1>
     </header>
     <main>
         <section class="service-category">
-            <h2>Mini Retouching Services (SGD)</h2>
-
-            <div class="package-table-container">
-                <table>
+            <h2>Product Photography (SGD)</h2>
+            <div class="package-table-container" style="overflow-x: auto;">
+                <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
                     <thead>
                         <tr>
                             <th>Package</th>
-                            <th>Price Range</th>
-                            <th>Included Features</th>
-                            <th>Not Included</th>
+                            <th>Details</th>
+                            <th>Price (SGD)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="Package"><strong>Quick Test Edit</strong><br>(1 image)</td>
-                            <td data-label="Price Range" class="price">SGD 10 – SGD 30<br><em>(Jewelry/reflective products may be at higher end)</em></td>
-                            <td data-label="Included Features">
-                                • Basic color & lighting correction<br>
-                                • Dust/scratch cleanup<br>
-                                • High-res JPEG only<br>
-                                • <strong>1–2 working day turnaround</strong><br>
-                                • No revision
+                            <td><strong>Basic Package</strong></td>
+                            <td>
+                                - 10-15 photos per product<br>
+                                - White or single-color background<br>
+                                - Basic retouching (color correction, dust removal)<br>
+                                - Delivery: High-res JPG/PNG<br>
+                                - Turnaround time: 3-5 business days
                             </td>
-                            <td data-label="Not Included">
-                                • Background changes<br>
-                                • Cropping<br>
-                                • Transparent/PNG<br>
-                                • Clothing/skin/gem color edits
-                            </td>
+                            <td><strong>SGD 50 - 80</strong><br><em>(Per Product)</em></td>
                         </tr>
                         <tr>
-                            <td data-label="Package"><strong>Small Batch</strong><br>(5–10 images)</td>
-                            <td data-label="Price Range" class="price">SGD 50 – SGD 100<br><em>(Jewelry/reflective products may be at higher end)</em></td>
-                            <td data-label="Included Features">
-                                • Basic color & lighting correction<br>
-                                • Dust/scratch cleanup<br>
-                                • Minor blemish retouching<br>
-                                • High-res JPEG<br>
-                                • 1 revision round<br>
-                                • <strong>2–5 working days</strong>
+                            <td><strong>Standard Package</strong></td>
+                            <td>
+                                - 15-20 photos per product<br>
+                                - White, single-color, or simple lifestyle background<br>
+                                - Standard retouching (blemish removal, light enhancement)<br>
+                                - Delivery: High-res JPG/PNG<br>
+                                - Turnaround time: 5-7 business days
                             </td>
-                            <td data-label="Not Included">
-                                • Background changes<br>
-                                • Cropping<br>
-                                • Transparent/PNG<br>
-                                • Clothing/skin/gem color edits
-                            </td>
+                            <td><strong>SGD 81 - 150</strong><br><em>(Per Product)</em></td>
                         </tr>
                         <tr>
-                            <td data-label="Package"><strong>Full Mini Batch</strong><br>(11–20 images)</td>
-                            <td data-label="Price Range" class="price">SGD 100 – SGD 350<br><em>(Jewelry/reflective products may be at higher end)</em></td>
-                            <td data-label="Included Features">
-                                • Basic color & lighting correction<br>
-                                • Exposure & white balance fix<br>
-                                • Dust/scratch cleanup<br>
-                                • Minor object/blemish retouching<br>
-                                • Sharpening & tone consistency<br>
-                                • High-res JPEG <br><em>(PNG/PSD optional add-on)</em><br>
-                                • 1 revision round<br>
-                                • <strong>2–5 working days</strong>
+                            <td><strong>Premium Package</strong></td>
+                            <td>
+                                - 20+ photos per product<br>
+                                - White, single-color, or complex lifestyle/styled background<br>
+                                - Advanced retouching (deep cleaning, color grading, compositing)<br>
+                                - Delivery: High-res JPG/PNG & PSD (upon request)<br>
+                                - Turnaround time: 7-10 business days
                             </td>
-                            <td data-label="Not Included">
-                                • Background changes<br>
-                                • Cropping<br>
-                                • Transparent/PNG<br>
-                                • Clothing/skin/gem color edits
-                            </td>
+                            <td><strong>SGD 151 - 250+</strong><br><em>(Per Product)</em></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
+
         <hr style="margin: 50px auto; border: none; border-top: 1px solid #eee; width: 80%;">
 
         <section class="service-category">
-            <h2>Product Photography Services</h2>
-
-            <h3>Mini Shoot (1–3 Products)</h3>
-            <div class="package-table-container">
-                <table>
+            <h2>Photo Retouching (SGD)</h2>
+            <div class="package-table-container" style="overflow-x: auto;">
+                <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
                     <thead>
                         <tr>
-                            <th>Feature</th>
-                            <th>Description</th>
+                            <th>Package</th>
+                            <th>Details</th>
+                            <th>Price (SGD)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="Feature">Price</td>
-                            <td data-label="Description" class="price">SGD 80 – SGD 130 total</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Angles per Product</td>
-                            <td data-label="Description">2–3 standard angles</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Editing</td>
-                            <td data-label="Description">Basic color correction, dust cleanup</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Output</td>
-                            <td data-label="Description">High-res JPEG only <br><small>(PNG/PSD available with add-on)</small></td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Turnaround</td>
-                            <td data-label="Description">2–4 working days</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Revision</td>
-                            <td data-label="Description">1 round included</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Extra Revision</td>
-                            <td data-label="Description" class="price">+SGD 15–40</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Express Delivery (48h)</td>
-                            <td data-label="Description" class="price">+SGD 50–100</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" style="text-align: center;">
-                                <p style="margin-bottom: 5px;">Ready to proceed or have questions?</p>
-                                <p style="font-weight: bold; margin-bottom: 10px;">Email us at: <a href="mailto:birdycreative@outlook.com" style="color: #007bff; text-decoration: underline;">birdycreative@outlook.com</a></p>
-                                <a href="mailto:birdycreative@outlook.com" class="button" style="margin-top: 0;">Click to Email Us</a>
+                            <td><strong>Basic Retouch</strong></td>
+                            <td>
+                                - Remove dust, spots, minor scratches<br>
+                                - Color correction, exposure adjustment<br>
+                                - Cropping and straightening<br>
+                                - Delivery: JPG/PNG<br>
+                                - Turnaround time: 1-3 days<br>
+                                <em>Suitable for everyday photos, product listings with minor flaws.</em>
                             </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <br> <h3>Batch Shoot (5–15+ Products)</h3>
-            <div class="package-table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Feature">Price</td>
-                            <td data-label="Description" class="price">SGD 10–25 per image <br><small>(Minimum 10 images)</small></td>
+                            <td><strong>SGD 3 - 5</strong><br><em>(Per Image)</em></td>
                         </tr>
                         <tr>
-                            <td data-label="Feature">Angles per Product</td>
-                            <td data-label="Description">Choose 1–3 per item</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Editing</td>
-                            <td data-label="Description">Batch color correction & cleanup</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Output</td>
-                            <td data-label="Description">High-res JPEG only <br><small>(PNG/PSD available with add-on)</small></td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Turnaround</td>
-                            <td data-label="Description">3–5 working days</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Revision</td>
-                            <td data-label="Description">1 round included</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Extra Revision</td>
-                            <td data-label="Description" class="price">+SGD 15–40</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Express Delivery (48h)</td>
-                            <td data-label="Description">Not Available</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" style="text-align: center;">
-                                <p style="margin-bottom: 5px;">Ready to proceed or have questions?</p>
-                                <p style="font-weight: bold; margin-bottom: 10px;">Email us at: <a href="mailto:birdycreative@outlook.com" style="color: #007bff; text-decoration: underline;">birdycreative@outlook.com</a></p>
-                                <a href="mailto:birdycreative@outlook.com" class="button" style="margin-top: 0;">Click to Email Us</a>
+                            <td><strong>Standard Retouch</strong></td>
+                            <td>
+                                - All Basic features<br>
+                                - Background clean-up/removal (simple)<br>
+                                - Object removal (small, simple objects)<br>
+                                - Skin smoothing (light)<br>
+                                - Delivery: JPG/PNG<br>
+                                - Turnaround time: 2-5 days<br>
+                                <em>Ideal for e-commerce products, portraits needing general enhancement.</em>
                             </td>
+                            <td><strong>SGD 6 - 15</strong><br><em>(Per Image)</em></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Advanced Retouch</strong></td>
+                            <td>
+                                - All Standard features<br>
+                                - Complex background manipulation/replacement<br>
+                                - Advanced object removal/addition<br>
+                                - Color grading, detailed skin retouching (freq. separation)<br>
+                                - Image compositing (simple)<br>
+                                - Delivery: JPG/PNG (PSD optional)<br>
+                                - Turnaround time: 3-7 days<br>
+                                <em>Best for high-end product photography, fashion, and complex editorial needs.</em>
+                            </td>
+                            <td><strong>SGD 16 - 30+</strong><br><em>(Per Image)</em></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
-        <hr style="margin: 50px auto; border: none; border-top: 1px solid #eee; width: 80%;">
 
-        <section class="service-category">
-            <h2>Services / Add-ons (SGD)</h2>
-            <div class="package-table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Add-on Service</th>
-                            <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Price Range</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Service">Remove background (Transparent)</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">SGD 8 – SGD 18 (per image)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Service">Extra Editing (Change Color / Remove Object)</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">SGD 8 – SGD 25 (per image)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Service">PSD / TIFF / PNG format</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">SGD 3 – SGD 15 (per image)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Service">Add logo & watermark on an image</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">SGD 2 (per image)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Service">Complex Retouching (Jewelry / Shots with many small objects)</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">SGD 8 – SGD 50 (per image)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Service">Reflection (Artificial product reflection)</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">SGD 5 (per image)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Service">Miniature Photography (Styled mini props/scene)</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">Start from SGD 80 (per image)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div style="background-color: #f9f9f9; padding: 12px; border-left: 4px solid #ffa500;">
-                <strong>💡 Bundle Offers:</strong>
-                <ul style="margin-top: 8px; padding-left: 20px;">
-                    <li><strong>PSD format + Transparent Background</strong> — <em>SGD 10 (per image)</em> <span style="color: #555;">(Save up to SGD 5–8)</span></li>
-                    <li><strong>Color Change + Object Removal</strong> — <em>SGD 15–20 (per image)</em> <span style="color: #555;">(Save SGD 5–10 depending on complexity)</span></li>
-                </ul>
-            </div>
+        <section style="text-align: center; margin-top: 40px; padding: 20px;">
+            <p style="margin-bottom: 5px;">For custom quotes or services not listed, please contact us:</p>
+            <p style="font-weight: bold; margin-bottom: 10px;">Email us at: <a href="mailto:birdycreative@outlook.com" style="color: #007bff; text-decoration: underline;">birdycreative@outlook.com</a></p>
+            <a href="mailto:birdycreative@outlook.com" class="button" style="margin-top: 0;">Click to Email Us</a>
         </section>
-        </main>
+
+    </main>
     <footer>
         <p>Prices are indicative and may vary based on project complexity. Contact us for a custom quote.</p>
         <p>&copy; Birdy Creative Studio</p>
