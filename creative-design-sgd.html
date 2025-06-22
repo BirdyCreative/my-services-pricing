@@ -10,12 +10,12 @@
             // Check if the current page is already creative-design-sgd.html
             // If it's already creative-design-sgd.html, don't redirect if currency is SGD
             // This is primarily for visitors landing directly or using the noscript fallback
-            
+
             fetch('https://ipapi.co/currency/')
                 .then(response => response.text())
                 .then(currency => {
                     const currentPage = window.location.pathname.split('/').pop();
-                    
+
                     if (currency === 'MYR') {
                         if (currentPage !== 'creative-design-myr.html') {
                             window.location.href = 'creative-design-myr.html';
@@ -60,9 +60,9 @@
         <section class="service-category">
             <h2>Creative Design Services (SGD)</h2>
             <div class="package-table-container" style="overflow-x: auto;">
-                <table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width: 100%;">
+                <table class="creative-design-table" border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width: 100%;">
                     <thead>
-                        <tr style="background-color: #f2f2f2;">
+                        <tr>
                             <th style="text-align: left;">Service</th>
                             <th style="text-align: left;">Details</th>
                             <th style="text-align: left;">Price (SGD)</th>
