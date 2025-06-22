@@ -24,7 +24,7 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
     </style>
-
+    
     <script>
         fetch('https://ipapi.co/json/')
             .then(response => response.json())
@@ -35,8 +35,8 @@
                 } else if (countryCode === 'SG') {
                     window.location.href = 'creative-design-sgd.html';
                 } else {
-                    // Fallback for other regions, or if API fails
-                    window.location.href = 'contact-us.html'; 
+                    // Fallback for other regions, now redirects to USD worldwide page
+                    window.location.href = 'prices-usd-worldwide.html'; // <--- THIS LINE IS CRUCIAL
                 }
             })
             .catch(error => {
@@ -47,6 +47,22 @@
     </script>
     </head>
 <body>
+    <noscript>
+        <div style="text-align: center; padding: 20px; border: 1px solid #ddd; background-color: #fff; margin: 20px auto; max-width: 600px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px;">
+            <h2>Please Enable JavaScript</h2>
+            <p>Our website uses JavaScript to show you the correct pricing based on your location. Please enable JavaScript in your browser settings to view our prices automatically.</p>
+            <p>Alternatively, you can manually select your preferred pricing here:</p>
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <li><a href="prices-myr.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Malaysia (MYR) - Product Photography & Retouching</a></li>
+                <li><a href="prices-sgd.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Singapore (SGD) - Product Photography & Retouching</a></li>
+                <li><a href="prices-usd-worldwide.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Worldwide (USD) - Photo Retouching & E-commerce Listing</a></li>
+                <li><a href="creative-design-myr.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Malaysia (MYR) - Creative Design</a></li>
+                <li><a href="creative-design-sgd.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Singapore (SGD) - Creative Design</a></li>
+                <li><a href="contact-us.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Contact Us</a></li>
+            </ul>
+            <p style="margin-top: 20px;">If you need assistance, please email us at <a href="mailto:birdycreative@outlook.com" style="color: #007bff; text-decoration: underline;">birdycreative@outlook.com</a></p>
+        </div>
+    </noscript>
     <div class="message">
         <p>Loading Creative Design prices for your region...</p>
         <p>If you are not redirected, please contact us at birdycreative@outlook.com</p>
