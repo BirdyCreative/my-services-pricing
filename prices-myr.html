@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Services & Prices - Malaysia (MYR) | Birdy Creative Studio</title>
+    <title>Product Photography & Retouching Prices - MYR | Birdy Creative Studio</title>
     <link rel="stylesheet" href="style.css">
+
     <script>
         fetch('https://ipapi.co/json/')
             .then(response => response.json())
             .then(data => {
                 const countryCode = data.country_code;
-                // If user is NOT in Malaysia, redirect them
+                // If the user is NOT in Malaysia, redirect them to the general landing page
                 if (countryCode !== 'MY') {
-                    // You can choose to redirect to the SGD page or a general contact page
-                    if (countryCode === 'SG') {
-                        window.location.href = 'prices-sgd.html'; // Redirect SG users to SGD page
-                    } else {
-                        window.location.href = 'contact-us.html'; // Redirect others to contact page
-                    }
+                    window.location.href = 'index.html'; // This will then correctly route them to SGD or USD
                 }
             })
             .catch(error => {
@@ -28,247 +24,173 @@
     </script>
     </head>
 <body>
+    <noscript>
+        <div style="text-align: center; padding: 20px; border: 1px solid #ddd; background-color: #fff; margin: 20px auto; max-width: 600px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px;">
+            <h2>Please Enable JavaScript</h2>
+            <p>Our website uses JavaScript to show you the correct pricing based on your location. Please enable JavaScript in your browser settings to view our prices automatically.</p>
+            <p>Alternatively, you can manually select your preferred pricing here:</p>
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <li><a href="prices-myr.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Malaysia (MYR) - Product Photography & Retouching</a></li>
+                <li><a href="prices-sgd.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Singapore (SGD) - Product Photography & Retouching</a></li>
+                <li><a href="prices-usd-worldwide.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Worldwide (USD) - Photo Retouching & E-commerce Listing</a></li>
+                <li><a href="creative-design-myr.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Malaysia (MYR) - Creative Design</a></li>
+                <li><a href="creative-design-sgd.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Singapore (SGD) - Creative Design</a></li>
+                <li><a href="contact-us.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Contact Us</a></li>
+            </ul>
+            <p style="margin-top: 20px;">If you need assistance, please email us at <a href="mailto:birdycreative@outlook.com" style="color: #007bff; text-decoration: underline;">birdycreative@outlook.com</a></p>
+        </div>
+    </noscript>
     <header>
-        <h1>Our Photography Services - Prices in Malaysian Ringgit (MYR)</h1>
+        <h1>Product Photography & Retouching Packages (MYR)</h1>
     </header>
     <main>
         <section class="service-category">
-            <h2>Mini Retouching Services (MYR)</h2>
-
-            <div class="package-table-container">
-                <table>
+            <h2>Product Photography Packages</h2>
+            <div class="package-table-container" style="overflow-x: auto;">
+                <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
                     <thead>
                         <tr>
-                            <th>Package</th>
-                            <th>Price Range</th>
-                            <th>Included Features</th>
-                            <th>Not Included</th>
+                            <th>Package Name</th>
+                            <th>Photos Included</th>
+                            <th>Price (MYR)</th>
+                            <th>Details</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="Package"><strong>Quick Test Edit</strong><br>(1 image)</td>
-                            <td data-label="Price Range" class="price">MYR 10 – MYR 30<br><em>(Jewelry/reflective products may be at higher end)</em></td>
-                            <td data-label="Included Features">
-                                • Basic color & lighting correction<br>
-                                • Dust/scratch cleanup<br>
-                                • High-res JPEG only<br>
-                                • <strong>1–2 working day turnaround</strong><br>
-                                • No revision
-                            </td>
-                            <td data-label="Not Included">
-                                • Background changes<br>
-                                • Cropping<br>
-                                • Transparent/PNG<br>
-                                • Clothing/skin/gem color edits
+                            <td><strong>Mini Shoot (Basic)</strong></td>
+                            <td>5 Photos</td>
+                            <td><strong>RM80 – RM150</strong><br><em>(Per photo)</em></td>
+                            <td>
+                                - Clean background (white/grey/black)<br>
+                                - Basic color correction<br>
+                                - Minor dust/blemish removal<br>
+                                - High-resolution JPG format<br>
+                                - <em>1-3 working day turnaround</em><br>
+                                <em>Client provides product</em><br>
+                                <strong>No revision included</strong>
                             </td>
                         </tr>
                         <tr>
-                            <td data-label="Package"><strong>Small Batch</strong><br>(5–10 images)</td>
-                            <td data-label="Price Range" class="price">MYR 50 – MYR 100<br><em>(Jewelry/reflective products may be at higher end)</em></td>
-                            <td data-label="Included Features">
-                                • Basic color & lighting correction<br>
-                                • Dust/scratch cleanup<br>
-                                • Minor blemish retouching<br>
-                                • High-res JPEG<br>
-                                • 1 revision round<br>
-                                • <strong>2–5 working days</strong>
-                            </td>
-                            <td data-label="Not Included">
-                                • Background changes<br>
-                                • Cropping<br>
-                                • Transparent/PNG<br>
-                                • Clothing/skin/gem color edits
+                            <td><strong>Standard Shoot (Standard)</strong></td>
+                            <td>10 Photos</td>
+                            <td><strong>RM60 – RM120</strong><br><em>(Per photo)</em></td>
+                            <td>
+                                - Clean background (white/grey/black)<br>
+                                - Basic color correction<br>
+                                - Minor dust/blemish removal<br>
+                                - High-resolution JPG format<br>
+                                - <em>2-5 working day turnaround</em><br>
+                                <em>Client provides product</em><br>
+                                <strong>1 free revision included</strong>
                             </td>
                         </tr>
                         <tr>
-                            <td data-label="Package"><strong>Full Mini Batch</strong><br>(11–20 images)</td>
-                            <td data-label="Price Range" class="price">MYR 100 – MYR 350<br><em>(Jewelry/reflective products may be at higher end)</em></td>
-                            <td data-label="Included Features">
-                                • Basic color & lighting correction<br>
-                                • Exposure & white balance fix<br>
-                                • Dust/scratch cleanup<br>
-                                • Minor object/blemish retouching<br>
-                                • Sharpening & tone consistency<br>
-                                • High-res JPEG <br><em>(PNG/PSD optional add-on)</em><br>
-                                • 1 revision round<br>
-                                • <strong>2–5 working days</strong>
-                            </td>
-                            <td data-label="Not Included">
-                                • Background changes<br>
-                                • Cropping<br>
-                                • Transparent/PNG<br>
-                                • Clothing/skin/gem color edits
+                            <td><strong>Pro Shoot (Advanced)</strong></td>
+                            <td>20 Photos</td>
+                            <td><strong>RM50 – RM100</strong><br><em>(Per photo)</em></td>
+                            <td>
+                                - Clean background (white/grey/black)<br>
+                                - Basic color correction<br>
+                                - Minor dust/blemish removal<br>
+                                - High-resolution JPG format<br>
+                                - <em>3-7 working day turnaround</em><br>
+                                <em>Client provides product</em><br>
+                                <strong>2 free revisions included</strong>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
+
         <hr style="margin: 50px auto; border: none; border-top: 1px solid #eee; width: 80%;">
 
         <section class="service-category">
-            <h2>Product Photography Services</h2>
-
-            <h3>Mini Shoot (1–3 Products)</h3>
-            <div class="package-table-container">
-                <table>
+            <h2>Photo Retouching Packages (MYR)</h2>
+            <div class="package-table-container" style="overflow-x: auto;">
+                <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
                     <thead>
                         <tr>
-                            <th>Feature</th>
-                            <th>Description</th>
+                            <th>Package Name</th>
+                            <th>Photos Included</th>
+                            <th>Price (MYR)</th>
+                            <th>Details</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="Feature">Price</td>
-                            <td data-label="Description" class="price">MYR 80 – MYR 130 total</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Angles per Product</td>
-                            <td data-label="Description">2–3 standard angles</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Editing</td>
-                            <td data-label="Description">Basic color correction, dust cleanup</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Output</td>
-                            <td data-label="Description">High-res JPEG only <br><small>(PNG/PSD available with add-on)</small></td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Turnaround</td>
-                            <td data-label="Description">2–4 working days</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Revision</td>
-                            <td data-label="Description">1 round included</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Extra Revision</td>
-                            <td data-label="Description" class="price">+MYR 15–40</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Express Delivery (48h)</td>
-                            <td data-label="Description" class="price">+MYR 50–100</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" style="text-align: center;">
-                                <p style="margin-bottom: 5px;">Ready to proceed or have questions?</p>
-                                <p style="font-weight: bold; margin-bottom: 10px;">Email us at: <a href="mailto:birdycreative@outlook.com" style="color: #007bff; text-decoration: underline;">birdycreative@outlook.com</a></p>
-                                <a href="mailto:birdycreative@outlook.com" class="button" style="margin-top: 0;">Click to Email Us</a>
+                            <td><strong>Quick Test Edit</strong></td>
+                            <td>1</td>
+                            <td><strong>RM10 – RM20</strong><br><em>(Jewelry/reflective products may be at higher end)</em></td>
+                            <td>
+                                - Light to moderate photo retouching<br>
+                                - Color and exposure correction<br>
+                                - Minor blemish and dust cleanup<br>
+                                - Basic alignment or straightening<br>
+                                - Delivered in high-resolution JPG only<br>
+                                - <em>1 working day turnaround</em><br>
+                                <em>Client provides original image</em><br>
+                                <strong>No revision included</strong>
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <br> <h3>Batch Shoot (5–15+ Products)</h3>
-            <div class="package-table-container">
-                <table>
-                    <thead>
                         <tr>
-                            <th>Feature</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Feature">Price</td>
-                            <td data-label="Description" class="price">MYR 10–25 per image <br><small>(Minimum 10 images)</small></td>
+                            <td><strong>Starter Batch</strong></td>
+                            <td>5</td>
+                            <td><strong>RM50 – RM225</strong><br><em>(Jewelry/reflective products may be at higher end)</em></td>
+                            <td>
+                                - Light to moderate photo retouching<br>
+                                - Color and exposure correction<br>
+                                - Minor blemish and dust cleanup<br>
+                                - Basic alignment or straightening<br>
+                                - Delivered in high-resolution JPG only<br>
+                                - <em>1–2 working day turnaround</em><br>
+                                <em>Client provides original images</em><br>
+                                <strong>No revision included</strong>
+                            </td>
                         </tr>
                         <tr>
-                            <td data-label="Feature">Angles per Product</td>
-                            <td data-label="Description">Choose 1–3 per item</td>
+                            <td><strong>Mini Batch (Growth 10)</strong></td>
+                            <td>10</td>
+                            <td><strong>RM80 – RM480</strong><br><em>(Jewelry/reflective products may be at higher end)</em></td>
+                            <td>
+                                - Light to moderate photo retouching<br>
+                                - Color and exposure correction<br>
+                                - Minor blemish and dust cleanup<br>
+                                - Basic alignment or straightening<br>
+                                - Delivered in high-resolution JPG only<br>
+                                - <em>2–5 working day turnaround</em><br>
+                                <em>Client provides original images</em><br>
+                                <strong>No revision included</strong>
+                            </td>
                         </tr>
                         <tr>
-                            <td data-label="Feature">Editing</td>
-                            <td data-label="Description">Batch color correction & cleanup</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Output</td>
-                            <td data-label="Description">High-res JPEG only <br><small>(PNG/PSD available with add-on)</small></td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Turnaround</td>
-                            <td data-label="Description">3–5 working days</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Revision</td>
-                            <td data-label="Description">1 round included</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Extra Revision</td>
-                            <td data-label="Description" class="price">+MYR 15–40</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Feature">Express Delivery (48h)</td>
-                            <td data-label="Description">Not Available</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" style="text-align: center;">
-                                <p style="margin-bottom: 5px;">Ready to proceed or have questions?</p>
-                                <p style="font-weight: bold; margin-bottom: 10px;">Email us at: <a href="mailto:birdycreative@outlook.com" style="color: #007bff; text-decoration: underline;">birdycreative@outlook.com</a></p>
-                                <a href="mailto:birdycreative@outlook.com" class="button" style="margin-top: 0;">Click to Email Us</a>
+                            <td><strong>Full Mini Batch (Pro 20)</strong></td>
+                            <td>20</td>
+                            <td><strong>RM100 – RM960</strong><br><em>(Jewelry/reflective products may be at higher end)</em></td>
+                            <td>
+                                - Light to moderate photo retouching<br>
+                                - Color and exposure correction<br>
+                                - Minor blemish and dust cleanup<br>
+                                - Basic alignment or straightening<br>
+                                - Delivered in high-resolution JPG only<br>
+                                - <em>3–10 working day turnaround</em><br>
+                                <em>Client provides original images</em><br>
+                                <strong>No revision included</strong>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
-        <hr style="margin: 50px auto; border: none; border-top: 1px solid #eee; width: 80%;">
 
-        <section class="service-category">
-            <h2>Services / Add-ons (MYR)</h2>
-            <div class="package-table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Add-on Description</th>
-                            <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Price Range</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Description">Remove background (Transparent)</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">MYR 8 – MYR 18 (per image)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Description">Extra Editing (Change Color / Remove Object)</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">MYR 10 – MYR 30 (per image)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Description">PSD / TIFF / PNG format</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">MYR 3 – MYR 20 (per image)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Description">Add logo & watermark on an image</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">MYR 3 (per image)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Description">Complex Retouching (Jewelry / many small objects)</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">MYR 10 – MYR 50 (per image)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Description">Reflection (Artificial product reflection)</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">MYR 10 (per image)</td>
-                        </tr>
-                        <tr>
-                           <td style="padding: 8px; border: 1px solid #ddd;" data-label="Add-on Description">Miniature Photography (Styled mini props/scene)</td>
-                            <td style="padding: 8px; border: 1px solid #ddd;" data-label="Price Range">From MYR 80 per image</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div style="background-color: #f9f9f9; padding: 12px; border-left: 4px solid #ffa500;">
-                <strong>💡 Bundle Offers:</strong>
-                <ul style="margin-top: 8px; padding-left: 20px;">
-                    <li><strong>PSD format + Transparent Background</strong> — <em>MYR 15</em> <span style="color: #555;">(Save up to MYR 5–8)</span></li>
-                    <li><strong>Color Change + Object Removal</strong> — <em>MYR 20–25</em> <span style="color: #555;">(Save MYR 5–10 depending on complexity)</span></li>
-                </ul>
-            </div>
+        <section style="text-align: center; margin-top: 40px; padding: 20px;">
+            <p style="margin-bottom: 5px;">For custom quotes or services not listed, please contact us:</p>
+            <p style="font-weight: bold; margin-bottom: 10px;">Email us at: <a href="mailto:birdycreative@outlook.com" style="color: #007bff; text-decoration: underline;">birdycreative@outlook.com</a></p>
+            <a href="mailto:birdycreative@outlook.com" class="button" style="margin-top: 0;">Click to Email Us</a>
         </section>
-        </main>
+
+    </main>
     <footer>
         <p>Prices are indicative and may vary based on project complexity. Contact us for a custom quote.</p>
         <p>&copy; Birdy Creative Studio</p>
