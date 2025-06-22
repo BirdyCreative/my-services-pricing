@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Retouching & E-commerce Listing Prices - Worldwide (USD) | Birdy Creative Studio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        fetch('https://ipapi.co/json/')
+            .then(response => response.json())
+            .then(data => {
+                const countryCode = data.country_code;
+                // If user is in Malaysia or Singapore, redirect them to their respective main pages
+                if (countryCode === 'MY') {
+                    window.location.href = 'index.html'; // Redirect to main index for MYR prices (photography)
+                } else if (countryCode === 'SG') {
+                    window.location.href = 'index.html'; // Redirect to main index for SGD prices (photography)
+                } 
+                // Otherwise (worldwide), allow the page to load
+            })
+            .catch(error => {
+                console.error('Error fetching geolocation:', error);
+                // Fallback if IP detection fails, redirect to contact page
+                window.location.href = 'contact-us.html';
+            });
+    </script>
+    </head>
+<body>
+    <header>
+        <h1>Our Services & Prices - Worldwide (USD)</h1>
+    </header>
+    <main>
+        <section class="service-category">
+            <h2>Photo Retouching Packages (USD)</h2>
+            <div class="package-table-container">
+                <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+                    <thead style="background-color: #f2f2f2;">
+                        <tr>
+                            <th>Package Name</th>
+                            <th>Photos Included</th>
+                            <th>Price (USD)</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Quick Test Edit</strong></td>
+                            <td>1</td>
+                            <td><strong>$10 – $20</strong><br><em>(Jewelry/reflective products may be at higher end)</em></td>
+                            <td>
+                                <strong>✔️ What's Included</strong><br>
+                                - Light to moderate photo retouching<br>
+                                - Color and exposure correction<br>
+                                - Minor blemish and dust cleanup<br>
+                                - Basic alignment or straightening<br>
+                                - Delivered in high-resolution JPG only<br>
+                                - <em>1 working day turnaround</em><br>
+                                <em>Client provides original image</em><br>
+                                <strong>No revision included</strong><br><br>
+                                <strong>❌ Not Included</strong><br>
+                                - Background changes<br>
+                                - Cropping for specific dimensions<br>
+                                - Transparent/PNG format<br>
+                                - Clothing/skin/gem color edits<br>
+                                - PSD export
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Starter Batch</strong></td>
+                            <td>5</td>
+                            <td><strong>$50 – $225</strong><br><em>(Jewelry/reflective products may be at higher end)</em></td>
+                            <td>
+                                <strong>✔️ What's Included</strong><br>
+                                - Light to moderate photo retouching<br>
+                                - Color and exposure correction<br>
+                                - Minor blemish and dust cleanup<br>
+                                - Basic alignment or straightening<br>
+                                - Delivered in high-resolution JPG only<br>
+                                - <em>1–2 working day turnaround</em><br>
+                                <em>Client provides original images</em><br>
+                                <strong>No revision included</strong><br><br>
+                                <strong>❌ Not Included</strong><br>
+                                - Background changes<br>
+                                - Cropping for specific dimensions<br>
+                                - Transparent/PNG format<br>
+                                - Clothing/skin/gem color edits<br>
+                                - PSD export
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mini Batch (Growth 10)</strong></td>
+                            <td>10</td>
+                            <td><strong>$80 – $480</strong><br><em>(Jewelry/reflective products may be at higher end)</em></td>
+                            <td>
+                                <strong>✔️ What's Included</strong><br>
+                                - Light to moderate photo retouching<br>
+                                - Color and exposure correction<br>
+                                - Minor blemish and dust cleanup<br>
+                                - Basic alignment or straightening<br>
+                                - Delivered in high-resolution JPG only<br>
+                                - <em>2–5 working day turnaround</em><br>
+                                <em>Client provides original images</em><br>
+                                <strong>No revision included</strong><br><br>
+                                <strong>❌ Not Included</strong><br>
+                                - Background changes<br>
+                                - Cropping for specific dimensions<br>
+                                - Transparent/PNG format<br>
+                                - Clothing/skin/gem color edits<br>
+                                - PSD export
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Full Mini Batch (Pro 20)</strong></td>
+                            <td>20</td>
+                            <td><strong>$100 – $960</strong><br><em>(Jewelry/reflective products may be at higher end)</em></td>
+                            <td>
+                                <strong>✔️ What's Included</strong><br>
+                                - Light to moderate photo retouching<br>
+                                - Color and exposure correction<br>
+                                - Minor blemish and dust cleanup<br>
+                                - Basic alignment or straightening<br>
+                                - Delivered in high-resolution JPG only<br>
+                                - <em>3–10 working day turnaround</em><br>
+                                <em>Client provides original images</em><br>
+                                <strong>No revision included</strong><br><br>
+                                <strong>❌ Not Included</strong><br>
+                                - Background changes<br>
+                                - Cropping for specific dimensions<br>
+                                - Transparent/PNG format<br>
+                                - Clothing/skin/gem color edits<br>
+                                - PSD export
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+        </section>
+
+        <hr style="margin: 50px auto; border: none; border-top: 1px solid #eee; width: 80%;">
+
+        <section class="service-category">
+            <h2>E-commerce Product Listing Service (USD)</h2>
+            <div class="package-table-container">
+                <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+                    <thead style="background-color: #f2f2f2;">
+                        <tr>
+                            <th>Service</th>
+                            <th>Details</th>
+                            <th>Price (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>E-commerce Product Listings</strong></td>
+                            <td>
+                                - Highlight key features/selling point on image<br>
+                                - Create product name<br>
+                                - Resize product image (based on platform)<br>
+                                - Create product description (translation not included)<br>
+                                - Add logo and watermark<br>
+                                - 1 free revision<br>
+                                - Up to 10–12 images per product<br>
+                                - Delivery: JPG (images), Word (text)<br>
+                                - Turnaround time: 1–7 days<br>
+                                <strong><em>Client provides original product photos.</em></strong><br>
+                                <strong><em>Light editing only, no complex retouching or product photography.</em></strong>
+                            </td>
+                            <td><strong>$35 – $45</strong><br><em>(Per Product)</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+        </section>
+
+        <section style="text-align: center; margin-top: 40px; padding: 20px;">
+            <p style="margin-bottom: 5px;">For custom quotes or services not listed, please contact us:</p>
+            <p style="font-weight: bold; margin-bottom: 10px;">Email us at: <a href="mailto:birdycreative@outlook.com" style="color: #007bff; text-decoration: underline;">birdycreative@outlook.com</a></p>
+            <a href="mailto:birdycreative@outlook.com" class="button" style="margin-top: 0;">Click to Email Us</a>
+        </section>
+
+    </main>
+    <footer>
+        <p>Prices are indicative and may vary based on project complexity. Contact us for a custom quote.</p>
+        <p>&copy; Birdy Creative Studio</p>
+    </footer>
+</body>
+</html>
