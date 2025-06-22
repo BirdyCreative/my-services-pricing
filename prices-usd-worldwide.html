@@ -1,32 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Retouching & E-commerce Listing Prices - Worldwide (USD) | Birdy Creative Studio</title>
-    <link rel="stylesheet" href="style.css">
-
-    <script>
-        fetch('https://ipapi.co/json/')
-            .then(response => response.json())
-            .then(data => {
-                const countryCode = data.country_code;
-                // If user is in Malaysia or Singapore, redirect them to their respective main pages
-                if (countryCode === 'MY') {
-                    window.location.href = 'index.html'; // Redirect to main index for MYR prices (photography)
-                } else if (countryCode === 'SG') {
-                    window.location.href = 'index.html'; // Redirect to main index for SGD prices (photography)
-                } 
-                // Otherwise (worldwide), allow the page to load
-            })
-            .catch(error => {
-                console.error('Error fetching geolocation:', error);
-                // Fallback if IP detection fails, redirect to contact page
-                window.location.href = 'contact-us.html';
-            });
-    </script>
-    </head>
 <body>
+    <noscript>
+        <div style="text-align: center; padding: 20px; border: 1px solid #ddd; background-color: #fff; margin: 20px auto; max-width: 600px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px;">
+            <h2>Please Enable JavaScript</h2>
+            <p>Our website uses JavaScript to show you the correct pricing based on your location. Please enable JavaScript in your browser settings to view our prices automatically.</p>
+            <p>Alternatively, you can manually select your preferred pricing here:</p>
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <li><a href="prices-myr.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Malaysia (MYR) - Product Photography & Retouching</a></li>
+                <li><a href="prices-sgd.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Singapore (SGD) - Product Photography & Retouching</a></li>
+                <li><a href="prices-usd-worldwide.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Worldwide (USD) - Photo Retouching & E-commerce Listing</a></li>
+                <li><a href="creative-design-myr.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Malaysia (MYR) - Creative Design</a></li>
+                <li><a href="creative-design-sgd.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Singapore (SGD) - Creative Design</a></li>
+                <li><a href="contact-us.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Contact Us</a></li>
+            </ul>
+            <p style="margin-top: 20px;">If you need assistance, please email us at <a href="mailto:birdycreative@outlook.com" style="color: #007bff; text-decoration: underline;">birdycreative@outlook.com</a></p>
+        </div>
+    </noscript>
     <header>
         <h1>Our Services & Prices - Worldwide (USD)</h1>
     </header>
@@ -53,7 +41,7 @@
                                 - Light to moderate photo retouching<br>
                                 - Color and exposure correction<br>
                                 - Minor blemish and dust cleanup<br>
-                                - Basic alignment or straightening<br>
+                                - Basic alignment or straightening<<br>
                                 - Delivered in high-resolution JPG only<br>
                                 - <em>1 working day turnaround</em><br>
                                 <em>Client provides original image</em><br>
